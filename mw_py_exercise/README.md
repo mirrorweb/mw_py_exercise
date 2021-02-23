@@ -16,7 +16,8 @@ Create a virtual environment for the project and install the following dependanc
 Set up a local MYSQL database with two tables:
 - company
 - employee
-<br>See [mw_py_exercise/database/README](https://github.com/mirrorweb/mw_py_exercise/blob/main/mw_py_exercise/database/README.md) for further instructions.
+
+See [mw_py_exercise/database/README](https://github.com/mirrorweb/mw_py_exercise/blob/main/mw_py_exercise/database/README.md) for further instructions.
 
 ## 1.2 Project Foundation
 Build a simple web application using Quart (the async version of the Flask framework).
@@ -24,7 +25,8 @@ Build a simple web application using Quart (the async version of the Flask frame
 - index
 - company
 - employee
-<br>Create a HTML template file for each route.
+
+Create a HTML template file for each route.
 <br>Use Bootstrap 4 for styling.
 
 ## 1.3 MYSQL client
