@@ -3,7 +3,7 @@
 This exercise is intended to allow candidates to display their capabilities in the fundamentals of the kind of skills
 that may be useful in the day-to-day work at MirrorWeb.
 
-Create a branch from main, name it <firstname>_<lastname> and work through steps 1-7.
+Create a branch from main, name it [firstname]_[lastname] and work through steps 1-7.
 
 1. Setup
 2. Data
