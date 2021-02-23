@@ -13,7 +13,7 @@ Create a branch from main, name it <firstname>_<lastname> and work through steps
 6. GitHub
 7. Question
 
-(See [mw_py_exercise/README](mw_py_exercise/README.mb) for more details.)
+(See [mw_py_exercise/README](https://github.com/mirrorweb/mw_py_exercise/blob/main/mw_py_exercise/README.md) for more details.)
 
 
 Thank your for participating.

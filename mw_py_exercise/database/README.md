@@ -1,4 +1,4 @@
-# 1.1.1 Company Record Fields
+## 1.1.1 Company Record Fields
 | name   | safe_name | address | telephone | enterprise | active |
 | (str)  | (str)     | (str)   | (int)     | (bool)     | (int)  |
 
@@ -6,7 +6,7 @@
 - The 'address' value should be a combination of the street, city, country, postcode
 - The 'active' value should be 1 for True and 0 for False
 
-# 1.1.2 Employee Record Fields
+## 1.1.2 Employee Record Fields
 | username | email | firstname | lastname | address | department | job   |
 | (str)    | (str) | (str)     | (str)    | (str)   | (str)      | (str) |
 
