@@ -17,8 +17,8 @@ Create a branch from main, name it [firstname]_[lastname] and work through steps
 
 
 Thank your for participating.
-If you have any questions or issues, please contact me lee.booth@mirrorweb.com
+<br>If you have any questions or issues, please contact me lee.booth@mirrorweb.com
 
 
 Once complete:
-[write step-by-step instructions here on how to replicate the setup of this application on another machine]
+<br>[write step-by-step instructions here on how to replicate the setup of this application on another machine]

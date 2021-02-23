@@ -14,14 +14,15 @@
 
 - The 'address' value should be a combination of the street, city, country, postcode
 
+
 ------
 
 Every record should have an appropriate primary key, of your choosing.
-The data should be relational.
+<br>The data should be relational.
 
 Every record should have a 'created' datetime field and an 'updated' datetime field.
-The 'created' value is set when the record is created & the 'updated' datetime is set whenever the record changes.
+<br>The 'created' value is set when the record is created & the 'updated' datetime is set whenever the record changes.
 
 
 Once complete:
-[write step-by-step instructions here on how to replicate the setup of your local database on another machine]
+<br>[write step-by-step instructions here on how to replicate the setup of your local database on another machine]

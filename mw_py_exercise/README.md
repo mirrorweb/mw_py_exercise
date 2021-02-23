@@ -16,33 +16,33 @@ Create a virtual environment for the project and install the following dependanc
 Set up a local MYSQL database with two tables:
 - company
 - employee
-See [mw_py_exercise/database/README](https://github.com/mirrorweb/mw_py_exercise/blob/main/mw_py_exercise/database/README.md) for further instructions.
+<br>See [mw_py_exercise/database/README](https://github.com/mirrorweb/mw_py_exercise/blob/main/mw_py_exercise/database/README.md) for further instructions.
 
 ## 1.2 Project Foundation
 Build a simple web application using Quart (the async version of the Flask framework).
-Add three routes:
+<br>Add three routes:
 - index
 - company
 - employee
-Create a HTML template file for each route.
-Use Bootstrap 4 for styling.
+<br>Create a HTML template file for each route.
+<br>Use Bootstrap 4 for styling.
 
 ## 1.3 MYSQL client
 Establish a pymysql client to interact with the database.
-Use a .env file to store the database connection details (host, username, password).
+<br>Use a .env file to store the database connection details (host, username, password).
 
 ## 2.0 Data Processing
 Write a python function to ingest the JSON file from the data folder.
-Process the raw data to match the expected record structures.
-Insert this data into the database.
+<br>Process the raw data to match the expected record structures.
+<br>Insert this data into the database.
 
 ## 2.1 SQL Queries
 Write SQL code to interact with database records, to be used in the app routes.
-This includes insert, update & delete logic for each table.
+<br>This includes insert, update & delete logic for each table.
 
 ## 3.0 Routes
 Create Quart routes for displaying and editing records.
-See [mw_py_exercise/routes/README](https://github.com/mirrorweb/mw_py_exercise/blob/main/mw_py_exercise/routes/README.md) for further instructions.
+<br>See [mw_py_exercise/routes/README](https://github.com/mirrorweb/mw_py_exercise/blob/main/mw_py_exercise/routes/README.md) for further instructions.
 
 ## 3.1 Adding records
 Add a method of adding company and employee records in the app.
@@ -58,7 +58,7 @@ Add logging to the project to output relevant information to the console.
 
 ## 5.0 Unit testing
 Add a basic unit test suite with a few good examples of how to test a web application.
-See [tests/README](https://github.com/mirrorweb/mw_py_exercise/blob/main/tests/README.md) for further instructions.
+<br>See [tests/README](https://github.com/mirrorweb/mw_py_exercise/blob/main/tests/README.md) for further instructions.
 
 ## 1.4 Requirements
 Please generate a requirements txt file for this project.

@@ -6,4 +6,4 @@
 
 
 Once complete:
-[write step-by-step instructions here on how to run your tests on another machine]
+<br>[write step-by-step instructions here on how to run your tests on another machine]
