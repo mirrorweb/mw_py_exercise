@@ -1,3 +1,4 @@
+import logging
 from quart import Quart, render_template
 from webapp.controller import mod_app
 
@@ -8,13 +9,13 @@ app = Quart(__name__)
 
 @app.before_serving
 async def create_db_conn():
-    print("Starting app")
+    logging.info("Starting app")
     app.sac = await connection()
 
 
 @app.after_serving
 async def close_db_conn():
-    print("Closing down app")
+    logging.info("Closing down app")
     await app.sac.close()
 
 

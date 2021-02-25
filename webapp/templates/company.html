@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Company</title>
+</head>
+<body>
+<div>
+    <div class="jumbotron text-center">
+        <h1>Company Information</h1>
+    </div>
+    <table class="table table-sm">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Telephone</th>
+        </tr>
+        </thead>
+        <tbody id="myTable">
+
+        <tr>
+            <td>{{company_data.name}}</td>
+            <td>{{company_data.address}}</td>
+            <td>{{company_data.telephone}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <div class="jumbotron">
+        <h2>Employees Information</h2>
+    </div>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">User Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Department</th>
+                <th scope="col">Job</th>
+            </tr>
+            </thead>
+
+            {% for d in employees_data%}
+            <tbody id="myTableEmployee">
+
+            <tr>
+
+                <td>{{d.firstname}}</td>
+                <td>{{d.lastname}}</td>
+                <td>{{d.username}}</td>
+                <td>{{d.email}}</td>
+                <td>{{d.department}}</td>
+                <td>{{d.job}}</td>
+            </tr>
+            </tbody>
+            {% endfor %}
+
+        </table>
+
+
+</div>
+
+</body>
+</html>
