@@ -22,3 +22,18 @@ Thank your for participating.
 
 Once complete:
 <br>[write step-by-step instructions here on how to replicate the setup of this application on another machine]
+
+
+## Project Settings
+- IDE Pycharm
+- Virtual env created in pycharm
+- DataBase Tool: Mysql workbench
+- Schema SQL for Database tables
+- Install Requirements
+- /add route to read the data from file and populate the db_tables.
+
+
+Project is completed like 60%, to show basic functionalities.
+
+- /company/<int:id>/details to check see company data and it's employees
+- User can update the company data.
