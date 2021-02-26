@@ -13,15 +13,7 @@ mod_app = Blueprint('mirror', __name__)
 async def index():
     try:
         conn = current_app.sac
-
-        with conn:
-            with conn.cursor() as cursor:
-                logging.info('Reading data from DB')
-                sql = "SELECT *  FROM `company`"
-                cursor.execute(sql)
-                result = cursor.fetchall()
-                logging.info(f'Result from DB: {result}')
-        url_data = result
+        url_data = Records(connection=conn).get_company_all()
         return await render_template("index.html", data=url_data)
     except Exception as error:
         logging.error(f'Exception: {error}')
@@ -71,7 +63,7 @@ async def read_data():
                     logging.info('Employees insert completed...')
             logging.info('Committing...')
             conn.commit()
-            conn.close()
+            #conn.close()
 
         return await render_template("index.html")
 
