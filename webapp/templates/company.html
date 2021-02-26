@@ -13,56 +13,53 @@
 <div>
     <div class="jumbotron text-center">
         <h1>Company Information</h1>
-    </div>
-    <table class="table table-sm">
-        <thead>
-        <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Address</th>
-            <th scope="col">Telephone</th>
-        </tr>
-        </thead>
-        <tbody id="myTable">
 
-        <tr>
-            <td>{{company_data.name}}</td>
-            <td>{{company_data.address}}</td>
-            <td>{{company_data.telephone}}</td>
-        </tr>
-        </tbody>
-    </table>
-    <br>
+        <form action="{{ url_for('mirror.update_company', company_id= company_data.id) }}" method="post">
+            <div class="form-group">
+                <label>Name</label>
+                <input class="form-control" type="text" name="name" value="{{company_data.name}}">
+            </div>
+            <div class="form-group">
+                <label>address</label>
+                <input class="form-control" type="text" name="address" value="{{company_data.address}}">
+            </div>
+            <div class="form-group">
+                <label>telephone</label>
+                <input class="form-control" type="text" name="telephone" value="{{company_data.telephone}}">
+            </div>
+            <button type="submit" class="btn btn-primary" >Update</button>
+        </form>
     <div class="jumbotron">
         <h2>Employees Information</h2>
     </div>
-        <table class="table table-hover">
-            <thead>
-            <tr>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">User Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Department</th>
-                <th scope="col">Job</th>
-            </tr>
-            </thead>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Department</th>
+            <th scope="col">Job</th>
+        </tr>
+        </thead>
 
-            {% for d in employees_data%}
-            <tbody id="myTableEmployee">
+        {% for d in employees_data%}
+        <tbody id="myTableEmployee">
 
-            <tr>
+        <tr>
 
-                <td>{{d.firstname}}</td>
-                <td>{{d.lastname}}</td>
-                <td>{{d.username}}</td>
-                <td>{{d.email}}</td>
-                <td>{{d.department}}</td>
-                <td>{{d.job}}</td>
-            </tr>
-            </tbody>
-            {% endfor %}
+            <td>{{d.firstname}}</td>
+            <td>{{d.lastname}}</td>
+            <td>{{d.username}}</td>
+            <td>{{d.email}}</td>
+            <td>{{d.department}}</td>
+            <td>{{d.job}}</td>
+        </tr>
+        </tbody>
+        {% endfor %}
 
-        </table>
+    </table>
 
 
 </div>

@@ -3,7 +3,7 @@ import logging
 import json
 import re
 
-from quart import render_template, Blueprint, current_app, jsonify, url_for
+from quart import render_template, Blueprint, current_app, request, redirect, url_for
 from webapp.records import Records
 
 mod_app = Blueprint('mirror', __name__)
@@ -69,8 +69,9 @@ async def read_data():
                     logging.info('Employees insert started...')
                     cursor.execute(sql_emp, val_emp)
                     logging.info('Employees insert completed...')
-        logging.info('Committing...')
-        conn.commit()
+            logging.info('Committing...')
+            conn.commit()
+            conn.close()
 
         return await render_template("index.html")
 
@@ -82,19 +83,30 @@ async def read_data():
 async def company(company_id):
     try:
         conn = current_app.sac
+        company_data = Records(connection=conn).get_company(company_id=company_id)
+        employees_data = Records(connection=conn).get_employees(company_id=company_id)
 
-        with conn.cursor() as cursor:
-            logging.info('Reading company data from DB')
-            sql = f"SELECT *  FROM `company` Where id= {company_id}"
-            cursor.execute(sql)
-            company_data = cursor.fetchone()
-            employees_data = Records(connection=conn).get_employees(company_id=company_id)
-            print(employees_data)
-            print(company_data)
         return await render_template("company.html", company_data=company_data, employees_data=employees_data)
     except Exception as error:
         logging.error(f'Exception: {error}')
 
+
+@mod_app.route('/company/<int:company_id>/update', methods=['POST'])
+async def update_company(company_id):
+    try:
+        conn = current_app.sac
+        form =await request.form
+        name = form.get('name')
+        safe_name = re.sub('[^A-Za-z0-9]+', '', name).lower()
+        address = form.get('address')
+        telephone = form.get('telephone')
+        Records(connection=conn).update_company(company_id, name, safe_name, address, telephone)
+        conn.commit()
+        return redirect(url_for('mirror.company', company_id=company_id))
+
+
+    except Exception as error:
+        logging.error(f'Exception: {error}')
 
 @mod_app.route('/company/employees/<int:company_id>', methods=['GET'])
 async def employees(company_id):
